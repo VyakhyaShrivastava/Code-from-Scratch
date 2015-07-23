@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+int fibonacci(int);
+int main()
+{
+    int n,i=0,c;
+    printf("\nEnter the number of terms : ");
+    scanf("%d",&n);
+    for(c=1;c<=n;c++)
+    {
+        printf("%d\n",fibonacci(i));
+        i++;
+    }
+    getch();
+}
+int fibonacci(int i)
+{
+    if(i==0)
+    {
+        return 0;
+    }
+    else if   (i==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return(fibonacci(i-1)+fibonacci(i-2));
+    }
+}
