@@ -1,0 +1,40 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class A
+{
+    int x,y;
+    public:
+        int z,a,b;
+     void mul(void);
+    void getdata(void);
+};
+class B : public A
+{
+    public:
+   void display(void);
+};
+void B :: display(void)
+{
+   cout << "The multiplication is : "<< z;
+   cout << "\naddition : "<<a<<endl<<"subtraction : "<<b;
+}
+void A :: getdata(void)
+{
+   cout << "Enter two numbers : ";
+   cin >> x>>y;
+}
+void A :: mul()
+{
+    z=x*y;
+    a=x+y;
+    b=x-y;
+}
+int main()
+{
+   B obj;
+   obj.getdata();
+   obj.mul();
+   obj.display();
+   getch();
+}
