@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    try{
+
+        int a;
+        cout<<"enter first number : ";
+        cin >> a;
+
+        int b;
+        cout<<"enter first number : ";
+        cin >> b;
+
+        if(b==0)
+        {
+            throw 0;
+        }
+
+        cout << a/b<<endl;
+
+    }catch(int x){
+        cout << "you can't divide by "<<x<<endl;
+    }
+}
