@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+     try
+    {
+       int momsage = 30,
+           sonsage = 34;
+           if(sonsage > momsage)
+    {
+        throw 99;
+    }
+    }
+
+    catch (int x)
+    {
+        cout << "son can't be older than mom. ERROR NUMBER : "<<x<<endl;
+    }
+}
