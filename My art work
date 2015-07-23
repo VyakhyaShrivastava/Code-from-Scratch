@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<conio.h>
+int age,fingers;
+int ages()
+{
+    printf("\nEnter your age : ");
+    scanf("%d",&age);
+    printf("\n");
+    if (age<12)
+    {
+        printf("u r kid");
+    }
+    else if (age>12 && age<=19)
+    {
+        printf("u r teenager !!!");
+    }
+    else if (age>19 && age<=40)
+    {
+        printf("u r adult");
+    }
+    else
+    {
+   printf("u r old !!!");
+    }
+}
+int organs()
+{
+     printf("\n\nhow many fingers do u have ? \nAnswer : ");
+    scanf("%d",&fingers);
+    printf("\n");
+    if(fingers==0){printf("wt d hell !");}
+        else if(fingers==1){ printf("hahahaa");}
+           else if(fingers==2){printf("that's d only thing :P");}
+           else if(fingers==3) {printf("Threeeeee , or kya chahiye ?");}
+           else if(fingers==4)  {printf("abra ka dabra");}
+           else if(fingers==5)  {printf("just half !");}
+           else if(fingers==6) {printf("sorry u have one extra");}
+          else if(fingers==7) {printf("hmm ? what's dis now !");}
+          else if(fingers==8) {printf("repair them ");}
+           else if(fingers==9) {printf("holy shits ! bring d last one... Hurry ... !");}
+           else if(fingers==10)  {printf("That's awesome !");}
+           else if(fingers==11) {printf("Hey, we have played this game of 11 fingers earlier in our pretty times :D");}
+            else  {  printf("u r weird !!!");}
+
+}
+int main()
+{
+    ages();
+    organs();
+    getch();
+}
