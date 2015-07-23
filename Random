@@ -1,0 +1,14 @@
+#include<iostream.h>
+#include<stdio.h>
+int getRandomNumber()
+{
+     return 4;
+}
+int main()
+{
+    getRandomNumber();
+   cout<<"hey ! "<<endl;
+      getch();
+  
+}
+
