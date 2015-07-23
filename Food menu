@@ -1,0 +1,85 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+void menu(int x)
+{
+    int c;
+    ifstream fileobj("food.txt");
+    int num, cost;
+    string foodItem;
+    if(x==1)
+    {
+        cout<<"\nWrite the price in Rs. up to which you are happy to pay : ";
+        cin >> c;
+        cout<<"\n\nHere is your List !!! ...\n\n";
+       while(fileobj>>num>>foodItem>>cost)
+       {
+           if(cost <= c)
+           {
+               cout << foodItem<<' '<<"  Rs. "<<cost<<endl;
+           }
+       }
+    }
+
+
+    if(x==2)
+    {
+            cout<<"\tMUTTON\n";
+            for(cost=1;cost<=4;cost++)
+            {while(fileobj>>num>>foodItem>>cost)
+                {cout<<foodItem<<' '<<"  Rs. "<<cost<<endl;}
+            }
+            fileobj.seekg(0);
+            cout<<"\tSEA FOOD\n";
+            for(cost=5;cost<=13;cost++)
+            {while(fileobj>>num>>foodItem>>cost)
+              {cout<<foodItem<<' '<<"  Rs. "<<cost<<endl;}
+            }
+            fileobj.seekg(0);
+            cout<<"\tNOODLES\n";
+            for(cost=14;cost<=18;cost++)
+            {while(fileobj>>num>>foodItem>>cost)
+                {cout <<foodItem<<' '<<"  Rs. "<<cost<<endl;}
+            }
+            fileobj.seekg(0);
+            cout<<"\tEGG\n";
+            for(cost=19;cost<=25;cost++)
+            {while(fileobj>>num>>foodItem>>cost)
+                {cout<<foodItem<<' '<<"  Rs. "<<cost<<endl;}
+            }
+            fileobj.seekg(0);
+            cout<<"\tVEGETARIAN DISHES\n";
+            for(cost=26;cost<=38;cost++)
+            {while(fileobj>>num>>foodItem>>cost)
+                {cout<<foodItem<<' '<<"  Rs. "<<cost<<endl;}
+            }
+            fileobj.seekg(0);
+            cout<<"\tTANDOOR\n";
+            for(cost=39;cost<=52;cost++)
+            {while(fileobj>>num>>foodItem>>cost)
+                {cout<<foodItem<<' '<<"  Rs. "<<cost<<endl;}
+            }
+    }
+    fileobj.close();
+}
+int choice()
+{
+    int a;
+    cout<<"\n\nIf you want to compare by Rate, press 1.\n\nIf you want to see the MENU, press 2. \n\nIf you want to Quit, press 3.\n\nChoice : ";
+    cin >> a;
+    return a;
+}
+int main()
+{
+    cout<<"\tWelcome to Hotel ATLANTIC \n\n\n";
+    int b = choice();
+    while(b!=3)
+    {
+    switch(b)
+    {
+        case 1: menu(1); break;
+        case 2: menu(2); break;
+    }
+    b=choice();
+    }
+}
