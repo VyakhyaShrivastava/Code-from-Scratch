@@ -1,0 +1,18 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+    int x;
+    string s = "VyakhyaShrivastava";
+    cout<<s.at(1)<<endl;
+    for(x=0;x<s.length();x++)
+    {
+        cout<<s.at(x);
+    }
+    cout<<endl;
+    for(x=s.length();x>0;x--)
+    {
+        cout<<s.at(x-1);
+    }
+}
