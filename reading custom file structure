@@ -1,0 +1,14 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    ifstream fileobj("players.txt");
+    int id; string name; double money;
+
+    while(fileobj >> id>>name>>money)
+    {
+        cout<<id<<", "<<name<<", "<<money<<endl;
+    }
+
+}
