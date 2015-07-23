@@ -1,0 +1,69 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+void display(int x);
+int get();
+int main()
+{
+    int kid;
+    kid = get();
+    while (kid != 4 && kid <4 && kid >0 )
+    {
+        switch(kid)
+        {
+        case 1: display(1);
+                 break;
+        case 2: display(2);
+                 break;
+        case 3: display(3);
+                 break;
+        }
+        kid = get();
+    }
+
+}
+int get()
+{
+    int choice;
+    cout <<"1 - just plain items" <<endl;
+    cout <<"2 - helpful items" <<endl;
+    cout <<"3 - harmful items" <<endl;
+    cout <<"4 - Quit the game." <<endl;
+    cin >> choice;
+    return choice;
+}
+void display(int x)
+{
+    ifstream fileObjConstructor("objects.txt");
+    string name; double power;
+    if (x==1)
+    {
+        while(fileObjConstructor>>name>>power)
+        {
+            if(power == 0)
+            {
+                cout << name <<' '<< power<<endl;
+            }
+        }
+    }
+    if (x==2)
+    {
+        while(fileObjConstructor>>name>>power)
+        {
+            if(power > 0)
+            {
+                cout << name <<' '<< power<<endl;
+            }
+        }
+    }
+    if (x==3)
+    {
+        while(fileObjConstructor>>name>>power)
+        {
+            if(power < 0)
+            {
+                cout << name <<' '<< power<<endl;
+            }
+        }
+    }
+}
