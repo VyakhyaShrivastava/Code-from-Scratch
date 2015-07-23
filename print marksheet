@@ -1,0 +1,67 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+class hello
+{
+    char n[50],br[50];
+    int sem,a,b,c,d,e,z;
+public:
+    hello()
+    {
+        cout<<"Enter name of candidate: ";
+        gets(n);
+        cout<<"\nEnter branch: ";
+        gets(br);
+        cout<<"\nEnter Semester: ";
+        cin>>sem;
+        cout<<"\nEnter Marks\n\t401: ";
+        cin>>a;
+        cout<<"\n\t402: ";
+        cin>>b;
+        cout<<"\n\t403: ";
+        cin>>c;
+        cout<<"\n\t404: ";
+        cin>>d;
+        cout<<"\n\t405: ";
+        cin>>e;
+    }
+    void display()
+    {
+        cout<<"\n\n\t\tORIENTAL COLLEGE OF TECHNOLOGY\n";
+        cout<<"\n________________________________________________________________________________\n";
+        cout<<"\nName: ";
+        puts(n);
+        cout<<"\nBranch: ";
+        puts(br);
+        cout<<"\nSemester: "<<sem;
+       cout<<"\n________________________________________________________________________________\n";
+        cout<<"\n\t\t\tMarks\n\n401: "<<a<<"\n402: "<<b<<"\n403: "<<c<<"\n404: "<<d<<"\n405: "<<e;
+        z=(a+b+c+d+e)/5;
+        if(z<=33)
+        {
+            cout<<"\n\nResult: Fail\n";
+        }
+        else
+        {
+            cout<<"\n\nResult: Pass";
+            if(z<40)
+            {
+                cout<<"\t\t\tDivision: III\n";
+            }
+            else if(z<60)
+            {
+                cout<<"\t\t\tDivision: II\n";
+            }
+            else
+            {
+                cout<<"\t\t\tDivision: I\n";
+            }
+        }
+    }
+};
+main()
+{
+    hello obj();
+    hello obj2;
+    obj2.display();
+}
