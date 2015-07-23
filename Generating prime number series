@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+    int n,i,j,c=0;
+    printf("Enter the limit upto which you want the prime numbers to be shown :");
+    scanf("%d",&n);
+    printf("The prime numbers are : \n");
+    for(i=2;i<=n;i++)
+    {
+        for(j=2;j<=i/2;j++)
+        {
+            if (i%j==0)
+            {
+                c=1;
+                break;
+            }
+        }
+        if(c==0)
+            printf("%d\n",i);
+    }
+}
