@@ -1,0 +1,15 @@
+#include<iostream>
+#include<stdlib.h>
+int  randomize();
+int main()
+{
+    char city[][10]={"delhi","chni","kolkta","bombay","bangluru"};
+    int fly;
+    for(int i=0;i<3;i++)
+    {
+        fly = randomize() + 1;
+        std::cout<<city[fly]<< " : ";
+           }}
+int randomize(){return 0;
+}
+
