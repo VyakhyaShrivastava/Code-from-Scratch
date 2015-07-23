@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+int fact(int);
+int main()
+{
+int n,res;
+printf("\n enter the element");
+scanf("%d",&n);
+res = fact(n);
+printf("\n result = %d",res);
+getch();
+}
+int fact(int n)
+{
+    if (n == 0)
+    {
+    return (1);
+    }
+    else
+{  int i = n+fact+(n-1);
+    return i;}
+}
+
