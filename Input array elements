@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+void traversal(int arr[],int);
+void main()
+{
+    int arr[100],a,i;
+    printf("how many nos. do you want to enter (max 100) = ");
+    scanf("%d",&a);
+    for (i=0;i<a;i++)
+    {
+        printf("enter %d no. = ",i+1);
+        scanf("%d",&arr[i]);
+    }
+                      traversal(arr,a);
+
+
+}
+void traversal(int arr[],int a)
+{
+    int i;
+     printf("\nnos. are\n");
+
+    for(i=0;i<a;i++)
+    {
+        printf("%d\n",arr[i]);
+    }
+
+
+}

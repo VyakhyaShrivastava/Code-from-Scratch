@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+    int a[3][3],b[3][3],c[3][3],i,j;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("Enter a[%d][%d]\t=   ",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("Enter b[%d][%d]\t=   ",i,j);
+            scanf("%d",&b[i][j]);
+        }
+    }
+     for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("Enter c[%d][%d]\t=   ",i,j);
+            scanf("%d",&c[i][j]);
+        }
+    }
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("\t%d",a[i][j]+b[i][j]+c[i][j]);
+        }
+    }
+    getch();
+}

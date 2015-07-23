@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<conio.h>
+#define max 50
+void bs(int [],int,int);
+main()
+{
+    int arr[max],n,item;
+	printf("\nhow many no.s you want to enter(max %d) \n",max);
+	scanf("%d",&n);
+	printf("\nenter %d no.s in ascending order :: \n",n);
+	for(int i=0;i<n;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	printf("\nenter the no. you want to search\n");
+	scanf("%d",&item);
+	bs(arr,n,item);
+	getch();
+}
+void bs(int arr[],int n,int item)
+{
+	int beg=0,end=n-1,mid;
+	mid=(beg+end)/2;
+	while(beg<=end)
+	{
+		if(item==arr[mid])
+		{
+			printf("\n%d found at position %d\n",item,mid+1);
+			break;
+		}
+		else if(item<arr[mid])
+		{
+			end=mid-1;
+		}
+		else
+		{
+			beg=mid+1;
+		}
+		mid=(beg+end)/2;
+	}
+	if(beg>end)
+	{
+		printf("\n%d not found\n",item);
+	}
+}

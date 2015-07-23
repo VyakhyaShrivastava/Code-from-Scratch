@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+int n;
+fact(int n);
+main()
+{
+    int g,temp;
+   printf("enter the no. whose factorial is to be found : ");
+    scanf("%d",&g);
+    temp=fact(g);
+     printf("factorial = %d",temp);
+}
+fact(int n)
+{
+  if (n==1)
+  {
+      return (n);
+  }
+  else
+  {
+      return (n*fact(n-1));
+  }
+}

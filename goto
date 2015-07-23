@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+    int i;
+    for(i=1;i<5;i++)
+    {
+        if(i==10)
+            goto error;
+    }
+    printf("i is not 10.");
+    error:
+        printf("Error, count can't be 10.");
+        getch();
+}

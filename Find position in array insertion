@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<conio.h>
+int a[10],n,item,i,j,pos;
+void enter()
+{
+     printf("Enter the size of array: ");
+     scanf("%d",&n);
+     for(i=0;i<n;i++)
+     {
+                     printf("Enter %d element : ",i+1);
+                     scanf("%d",&a[i]);
+     }
+}
+void insert()
+{
+     printf("Enter the element you want to insert : ");
+     scanf("%d",&item);
+     printf("\nEnter the position of the element : ");
+     scanf("%d",&pos);
+     for(j=n;j>=pos;j--)
+     {
+                        a[j]=a[j-1];
+     }
+     a[pos-1]=item;
+     n=n+1;
+}
+void show()
+{
+     for(i=0;i<n;i++)
+     {
+                     printf("\nThe %d element is = ",i+1);
+                    printf("%d",a[i]);
+     }
+}
+int main()
+{
+     enter();
+     insert();
+     show();
+
+     getch();
+}

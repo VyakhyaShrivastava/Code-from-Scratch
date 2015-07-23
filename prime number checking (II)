@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+int prime(int a)
+{
+    static int d= 2;
+    static int flag = 1;
+    if (d==a)
+        return(0);
+    else
+    {
+        if(a%d==0)
+        {
+            flag = 0;
+            d++;
+        }
+        else
+        {
+            d++;
+            flag = 1;
+            prime(a);
+        }
+    }
+    return (flag);
+}
+main()
+{
+int n;
+printf("Enter the number : ");
+scanf("%d",&n);
+if(n==2)
+    printf("Prime number");
+else if (n<2)
+    printf("The smallest prime number is 2. ");
+else
+{
+    int f = prime(n);
+    if (f)
+    {
+        printf("prime");
+    }
+    else printf("not prime");
+}
+getch();
+}

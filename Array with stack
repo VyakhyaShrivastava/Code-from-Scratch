@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+struct
+{
+    int info;int link;
+}arr[10];
+int main()
+{
+   int start,temp;
+   printf("\nENTER THE STARTING ADDRESS (0-9) : ");
+   scanf("%d",&start);
+   temp=start;
+   while(temp!=-1)
+   {
+       printf("\nEnter the no. : ");
+       scanf("%d",&arr[temp].info);
+       printf("\nEnter the adress (0-9) or -1 to terminate : ");
+       scanf("%d",&arr[temp].link);
+       temp=arr[temp].link;
+   }
+    printf("\nNow the elements are   ");
+       temp=start;
+   while(temp!=-1)
+   {
+      printf("\t%d",arr[temp].info);
+      temp=arr[temp].link;
+   }
+   getch();
+}

@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<conio.h>
+#include<malloc.h>
+struct node
+{
+	int info;
+	struct node *link;
+}*start;
+ main()
+{
+	struct node *q,*temp;
+	int n;
+	start=0;
+	while(1)
+	{
+		printf("\nenter the element(-1 to end)::");
+		scanf("%d",&n);
+		if(n==-1)
+			break;
+		if(start==0)
+		{
+			temp=(node*)malloc(sizeof(node));
+			start=temp;
+			temp->info=n;
+			temp->link=0;
+		}
+		else
+		{
+			temp=(node*)malloc(sizeof(node));
+			temp->info=n;
+			temp->link=0;
+			q=start;
+			while(q->link!=0)
+				q=q->link;
+			q->link=temp;
+		}
+	}
+	printf("\nentered elements are\n");
+	temp=start;
+	printf("%d\n",temp->info);
+	while(temp->link!=0)
+	{
+		temp=temp->link;
+		printf("%d\n",temp->info);
+	}
+	getch();
+}

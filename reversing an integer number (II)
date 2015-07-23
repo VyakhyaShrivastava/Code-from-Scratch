@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+int fn(int n)
+{
+  int d;
+  static int r=0;
+  if(n==0)
+  {
+      return(n);
+  }
+  else
+  {
+      d = n%10;
+      r=r*10+d;
+      fn(n/10);
+  }
+  return(r);
+}
+main()
+{
+ int n;
+ printf("Enter the number : ");
+ scanf("%d",&n);
+ int temp=fn(n);
+ printf("The reverse of %d is %d",n,temp);
+ getch();
+}

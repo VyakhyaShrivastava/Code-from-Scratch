@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+main()
+{
+    char *msg;
+    msg = (char *)malloc(30 * sizeof(char));
+    strcopy(msg, "Able was I.");
+    printf("The message now is %s\n",msg);
+    msg = (char *)realloc (msg,50);
+    strcopy(msg, "Ere I saw Elba...");
+    printf("\nThe message is now %s",msg);
+    free (msg);
+    getch();
+}

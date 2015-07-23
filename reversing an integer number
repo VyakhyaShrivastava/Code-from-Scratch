@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+int s,i,a;                        //s=5
+int n[10];
+main()
+{
+    printf("Enter the limit upto which you want to enter numbers : ");
+    scanf("%d",&s);
+    printf("Enter the numbers : ");
+    for(i=0;i<s;i++)
+    {
+        scanf("%d",&n[i]);
+    }
+    printf("The reverse of the number is %d%d%d%d%d",n[4],n[3],n[2],n[1],n[0]);
+}

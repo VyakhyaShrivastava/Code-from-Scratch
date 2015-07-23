@@ -1,0 +1,26 @@
+#include<conio.h>
+int f(int x, int y)
+{
+    if (x<y)
+    {
+        printf("The value of n can't be less than r.");
+        exit(1);
+    }
+    if (y == 0 || y == x)
+    {
+        return(1);
+    }
+    else
+    {
+        return(f(x-1,y-1) + f(x-1,y));
+    }
+}
+main()
+{
+int a,b,t;
+printf("Enter n and r [n>=r] : ");
+scanf("%d %d",&a,&b);
+t=f(a,b);
+printf("The binomial coefficent of C is %d",t);
+getch();
+}

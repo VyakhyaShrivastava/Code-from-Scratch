@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+int n;
+int fibo(int n)
+{
+    if(n==0 || n==1)
+        return (n);
+    else
+        return(fibo(n-1)+fibo(n-2));
+}
+main()
+{
+    int i;
+    printf("Enter the position upto which you want the values of the fibonacci series to be displayed: ");
+    scanf("%d",&n);
+    printf("The fibonacci series is \n");
+    for(i=1;i<=n;i++)
+    {
+       int temp=fibo(i);
+        printf("%d\n",temp);
+    }
+    getch();
+}

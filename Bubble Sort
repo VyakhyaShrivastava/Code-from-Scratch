@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<conio.h>
+#define max 10
+void bubble(int [],int);
+main()
+{
+	int arr[max],n,i;
+	printf("\nhow many no.s you want to enter(max %d) :: ",max);
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("\nenter %d number :: ",i+1);
+		scanf("%d",&arr[i]);
+	}
+	bubble(arr,n);
+	printf("\nnow sorted elements are\n");
+	for(i=0;i<n;i++)
+	{
+		printf(" %d ",arr[i]);
+	}
+	getch();
+}
+void bubble(int arr[],int n)
+{
+	int temp;
+	for(int i=0;i<n-1;i++)
+	{
+		for(int j=0;j<n-i-1;j++)
+		{
+			if(arr[j]>arr[j+1])
+			{
+				temp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+			}
+		}
+		printf("\npass %d :: ",i+1);
+		for(int k=0;k<n;k++)
+		{
+			printf(" %d ",arr[k]);
+		}
+	}
+}

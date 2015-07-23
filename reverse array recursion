@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+int A[],n,i;
+int ReverseArray();
+int print();
+main()
+{
+    printf("enter the size of the array: ");
+    scanf("%d",&n);
+    printf("enter the elements of the array :\n ");
+   for(i=1;i<=n;i++)
+   {
+       scanf("%d",&A[i]);
+   }
+    int ReverseArray( );
+    int print();
+}
+int ReverseArray()
+{
+    return (A[i=1]+A[n-1]);
+    ReverseArray();
+}
+int print()
+{
+    return (A[i]+A[n]);
+    ReverseArray();
+}
