@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+int power,num;
+int fun_ofPower(int b);
+main()
+{
+int a;
+printf("Enter the value whose log is to be calculated : ");
+scanf("%d",&a);                         //log a, with base 2
+for(power=0;power<=10;power++)
+{
+    if(power)
+    {
+         num =  fun_ofPower(power);                   // 2 ^ power
+         if(num>a)
+    {
+        printf("Ceiling of the logarithm is %d",num);
+    }
+    }
+}
+getch();
+}
+int fun_ofPower(int b)                                // 2 ^ power
+{
+    if (power == 0)
+        return 1;
+    else
+        return 2*fun_ofPower(power-1);
+}
