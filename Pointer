@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int a;
+        printf("address of a is %d\n",&a);
+    printf("value of a = ");
+    scanf("%d",&a);
+    printf("a = %d",a);
+    printf("\naddress of a is %d\n",&a);
+    int *b;
+    b=&a;
+    printf("\nAlso, b = %d\n",b);
+    int c=3;
+    int *d=&c;
+    printf("*d=&c= %d",d);
+    int e=3;
+    int *t=&e;
+    printf("\n*t=&e= %d",t);
+    getch();
+}
