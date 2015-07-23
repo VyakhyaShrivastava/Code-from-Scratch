@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+
+class enemy
+{
+    int a;
+public:
+    virtual void attack(){
+    cout<<"Beware !! I am ur enemy !!!"<<endl;
+    }
+};
+class ninja : public  enemy
+{
+  public:
+      void attack(){
+      cout<<"You'll now be chopped into pieces by mie sword !!! ..."<<endl;
+      }
+};
+class monster : public enemy
+{
+ public:
+     void attack(){
+     cout<<"Now , u 'll be dead !! Go to the death bed !! ..."<< endl;
+     }
+};
+int main()
+{
+    ninja no;
+    monster mo;
+    enemy *eo1 = &no;
+    enemy *eo2 = &mo;
+    eo1 -> attack();
+    eo2 -> attack();
+}
