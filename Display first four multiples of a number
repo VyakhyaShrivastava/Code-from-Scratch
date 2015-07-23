@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+int multi (int );
+main()
+{
+    int i;
+    multi(10);
+    getch();
+}
+int multi(int n)
+{
+    if (n<10000)
+    {
+        multi (n*10);
+        printf("\n%d",n);
+    }
+}
