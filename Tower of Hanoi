@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+void toh(int n,char s,char t,char d);
+main()
+{
+    int n;
+    char s='s',t='t',d='d';
+    printf("Number of disks = ");
+    scanf("%d",&n);
+    toh(n,s,t,d);
+    getch();
+}
+void toh(int n,char s,char t,char d)
+{
+    if(n>0)
+    {
+        toh(n-1,s,t,d);
+        printf("\n Move disk %d %c -> %c",n,s,d);
+        toh(n-1,t,s,d);
+    }
+}
