@@ -1,0 +1,13 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    ofstream fileobj("players.txt");
+    cout<<"Enter player Id number , Name , and Money .\nPress Ctrl+Z to Quit.\n";
+    int Idnum;string name;double money;
+    while(cin>>Idnum>>name>>money)
+    {
+        fileobj<<Idnum<<' '<<name<<' '<<money<<endl;
+    }
+}
