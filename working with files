@@ -1,0 +1,24 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+    ofstream myfile;
+    myfile.open("pussy.txt");
+
+    myfile<<"The answer to universe, life and everything is 42, simple enough, hehehehe .... !\n";
+    myfile.close();
+    cout<<"pussy text file has been created ! \n";
+
+    ofstream onemore("new.txt");
+
+    cout<<"one more file has been created...\n";
+
+    if(onemore.is_open())
+    cout<<"the file is open . \n";
+    else cout<<"you messed up ! \n";
+
+    onemore<<"I'm one more file here now...\n";
+    onemore.close();
+}
