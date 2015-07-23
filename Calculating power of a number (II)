@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+int n,p,temp;
+int f(int n, int p)
+{
+    static int r=1;
+    int i;
+    if(p==0)
+    {
+        return(1);
+    }
+    else
+    {
+        r=r*n;
+        f(n,p-1);
+    }
+    return(r);
+}
+main()
+{
+    printf("Enter the number ");
+    scanf("%d",&n);
+    printf("Enter the power to be calculated ");
+    scanf("%d",&p);
+    temp=f(n,p);
+    printf("The result of %d to power %d is %d",n,p,temp);
+    getch();
+}
+
