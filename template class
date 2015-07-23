@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+template <class T>
+
+class num
+{
+    T first , sec;
+public:
+    num(T a, T b)
+    {
+        first =a;
+        sec = b;
+    }
+    T bigger();
+};
+
+template <class T>
+
+T num <T> :: bigger()
+{
+    return (first>sec?first:sec);
+}
+int main()
+{
+    num <int> obj (10,27);
+    cout << obj.bigger() ;
+}
