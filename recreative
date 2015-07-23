@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+int fact(int);
+int main()
+{
+int f,n,i,fact=1;
+printf("\n enter the element");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+                  f=f*i;
+}
+printf("factorial of n %d");
+getch();
+}                 
