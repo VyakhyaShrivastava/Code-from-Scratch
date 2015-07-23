@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+int f(int,int);
+main()
+{
+    int a,b,t;
+    printf("Enter two numbers whose GCD is to be found : ");
+    scanf("%d %d",&a,&b);
+    t=f(a,b);
+    printf("GCD of %d and %d is %d",a,b,t);
+    getch();
+}
+int f(int x, int y)
+{
+    int r;
+    if(y==0)
+        return (x);
+    else
+    {
+        r=x%y;
+        return (f(y,r));
+    }
+}
