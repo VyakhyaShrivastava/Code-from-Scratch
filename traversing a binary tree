@@ -1,0 +1,116 @@
+#include<stdio.h>
+#include<conio.h>
+struct node
+{
+    int num;
+    struct node *left;
+    struct node *right;
+};
+typedef struct node node;
+node *root = NULL ;
+node *insertion(struct rec *tree, long num);
+void preorder(node *tree);
+void inorder(node *tree);
+void postorder(node *tree);
+int count =1;
+main()
+{
+    int choice; long digit;
+    do
+    {
+        choice= select();
+        switch(choice)
+        {
+            case 1: puts ("Enter integer : To Quit enter 0");
+            scanf("%d",&digit);
+            while(digit != 0)
+            {
+                root = insertion(root,digit);
+                scanf("%d",&digit);
+            }
+            continue;
+            case 2: puts("\n Preorder traversing TREE");
+            preorder (root);
+            continue;
+            case 3: puts ("\n Inorder traversing TREE");
+
+            inorder (root);
+            continue;
+            case 4: puts ("\n Postorder traversing TREE");
+            postorder (root);
+            continue;
+            case 5: puts("END");
+        }
+    }
+    while (choice != 5);
+}
+int select()
+{
+    int selection;
+    do
+    {
+        puts("Enter 1 : Insert a node in the BT");
+         puts("Enter 1 : Display (preorder) the BT");
+          puts("Enter 1 : Display (inorder) the BT");
+           puts("Enter 1 : Display (postorder) the BT");
+           puts("Enter 5 : END");
+           puts("Enter your choice : ");
+           scanf("%d", & selection);
+           if((selection<1)||(selection>5))
+           {
+               puts("Wrong choice : Try again");
+               getch();
+           }
+    }
+    while ((selection<1)||(selection>5));
+    return (selection);
+}
+node *insertion(node *P, long digit)
+{
+    if (P== NULL)
+    {
+        P=(node *)malloc(sizeof(node));
+        P->left=P->right=NULL;
+        P->num=digit;
+        count ++;
+    }
+    else
+    {
+        if(count % 2==0)
+       {
+        P->left= insertion(P->left, digit);
+       }
+    else
+    {
+        P->right = insertion(P->right, digit);
+    }
+    }
+    return (P);
+}
+void preorder(node *P)
+{
+    if (P!=NULL)
+    {
+        printf("%d\n",P->num);
+        preorder(P->left);
+        preorder(P->right);
+    }
+}
+void inorder(node *P)
+{
+    if (P!=NULL)
+    {
+        inorder(P->left);
+        printf("%d\n",P->num);
+        inorder(P->right);
+    }
+}
+void postorder(node *P)
+{
+    if (P!=NULL)
+    {
+        postorder(P->left);
+        postorder(P->right);
+         printf("%d\n",P->num);
+    }
+}
