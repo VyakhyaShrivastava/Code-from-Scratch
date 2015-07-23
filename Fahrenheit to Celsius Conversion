@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int m,n,a=0,b=300,c=20;
+    printf("fahr\t    cels\n\n");
+    for(m=a;m<=b;m+=c)
+    {
+               n=5*(m-32)/9;
+               printf("%d\t  %d",m,n);
+               printf("\n");
+    }
+        
+    getch();
+}
