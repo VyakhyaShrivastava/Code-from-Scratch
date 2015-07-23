@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+template < class vya, class shr >
+
+shr funct1( vya  a, shr b)
+{
+return (a<b?a:b);
+}
+
+int main()
+{
+    int x;
+    double y;
+    cout<<"enter an integer : ";
+    cin>>x;
+    cout<<"enter a double : ";
+    cin>>y;
+    cout << "\nThe smaller is : "<<funct1(x,y)<< endl;
+}
+
