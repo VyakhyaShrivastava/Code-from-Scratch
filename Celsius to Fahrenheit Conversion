@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int n,m,a=0,b=300,c=20;
+    n=a;
+    printf("cels\t  fahr\n\n");
+    while(n<=b)
+    {
+               m=32+(9/5)*n;
+               printf("%d\t  %d\n",n,m);
+               n+=c;
+    }
+    getch();
+}
